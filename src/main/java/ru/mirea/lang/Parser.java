@@ -182,8 +182,7 @@ public class Parser {
                             VarNode var = (VarNode) node;
                             Integer test = identifiers.get(var.id.text);
                             if (test == null) {
-                                System.out.println("Неопределенный идентификатор: " + var.id.text);
-                                throw new NullPointerException();
+                                throw new NullPointerException("Неопределенный идентификатор: " + var.id.text);
                             }
                             else
                                 return test;
